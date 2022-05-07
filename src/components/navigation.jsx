@@ -1,8 +1,15 @@
-import {Link, Route,Routes} from 'react-router-dom'
-import Login from '../Login/Login'
+import {Link, Route,Routes, useParams} from 'react-router-dom'
+import SimpleInput from '../Login/Login';
+
+
+
 export const Navigation = (props) => {
 
+  const params=useParams()
   
+  const goLoginPage=()=>{
+    console.log('dqw');
+  }
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div className='container'>
@@ -19,7 +26,7 @@ export const Navigation = (props) => {
             <span className='icon-bar'></span>{' '}
             <span className='icon-bar'></span>{' '}
           </button>
-          <a className='navbar-brand page-scroll' href='#page-top'>
+          <a className='navbar-brand page-scroll' href='/#page-top'>
             Public Shop
           </a>{' '}
         </div>
@@ -30,20 +37,17 @@ export const Navigation = (props) => {
         >
           <ul className='nav navbar-nav navbar-right'>
             <li>
-              <Link to='/login'>Login</Link>
-            </li>
-            <li>
-              <a href='#features' className='page-scroll'>
+              <a href='/#features' className='page-scroll'>
                 Purpose
               </a>
             </li>
             <li>
-              <a href='#about' className='page-scroll'>
+              <a href='/#about' className='page-scroll'>
                 About
               </a>
             </li>
             <li>
-              <a href='#services' className='page-scroll'>
+              <a href='/#services' className='page-scroll'>
                 Services
               </a>
             </li>

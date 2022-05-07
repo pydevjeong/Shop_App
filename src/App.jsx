@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
 import { Features } from "./components/features";
@@ -11,6 +11,8 @@ import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import SimpleInput from "./Login/Login";
 
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -18,15 +20,20 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
   speedAsDuration: true,
 });
 
-const App = () => {
+const App = (props) => {
   const [landingPageData, setLandingPageData] = useState({});
   useEffect(() => {
     setLandingPageData(JsonData);
   }, []);
 
+  const [isLogin,setIsLogin]=useState(false)
+  const [isValid,setIsValid]=useState(false)
+
   return (
-    <div>
-      
+    <Fragment>
+    {!isLogin && <SimpleInput checkIsValid={setIsValid}/>}
+
+    {isLogin && <div>
       <Navigation />
       <Header data={landingPageData.Header} />
       <Features data={landingPageData.Features} />
@@ -35,7 +42,8 @@ const App = () => {
       <Gallery data={landingPageData.Gallery}/>
       <Team data={landingPageData.Team} />
       <Contact data={landingPageData.Contact} />
-    </div>
+    </div>}
+    </Fragment>
   );
 };
 
