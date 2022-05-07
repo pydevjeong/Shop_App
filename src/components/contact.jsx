@@ -41,8 +41,7 @@ export const Contact = (props) => {
               <div className='section-title'>
                 <h2>Get In Touch</h2>
                 <p>
-                  Please fill out the form below to send us an email and we will
-                  get back to you as soon as possible.
+                  이름과 이메일, 저희한테 궁금한것들을 여기 입력해서 보내면 공용이메일로 날라옵니다.
                 </p>
               </div>
               <form name='sentMessage' validate onSubmit={handleSubmit}>

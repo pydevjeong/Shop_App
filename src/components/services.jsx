@@ -3,10 +3,9 @@ export const Services = (props) => {
     <div id='services' className='text-center'>
       <div className='container'>
         <div className='section-title'>
-          <h2>Our Services</h2>
+          <h2>우리가 구현해본것들</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
+            다양한 사이트, 다양한 기능들을 구현하려고 했다.
           </p>
         </div>
         <div className='row'>
