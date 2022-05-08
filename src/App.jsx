@@ -5,14 +5,15 @@ import { Features } from "./components/features";
 import { About } from "./components/about";
 import { Services } from "./components/services";
 import { Gallery } from "./components/gallery";
-
 import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import SimpleInput from "./Login/Login";
+import SignIn from "./Login/SignIn";
+import MainHeader from "./components/MainHeader";
+import RouterPage from "./Login/RouterPage";
 
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -31,7 +32,7 @@ const App = (props) => {
 
   return (
     <Fragment>
-    {!isLogin && <SimpleInput checkIsValid={setIsValid}/>}
+    {!isLogin && <RouterPage/>}
 
     {isLogin && <div>
       <Navigation />
