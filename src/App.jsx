@@ -27,8 +27,12 @@ const App = (props) => {
     setLandingPageData(JsonData);
   }, []);
 
-  const [isLogin,setIsLogin]=useState(false)
+  const [isLogin,setIsLogin]=useState(true)
   const [isValid,setIsValid]=useState(false)
+
+  if(props.showMainPage){
+    setIsLogin(true)
+  }
 
   return (
     <Fragment>

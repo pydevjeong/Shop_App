@@ -1,11 +1,13 @@
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
 import { Route, Routes } from "react-router-dom"
+import App from "../App"
 import MainHeader from "../components/MainHeader"
 import SignIn from "./SignIn"
 import SignUp from "./SignUp"
 
 
 const RouterPage=()=>{
+  const [isValid,setIsValid]=useState(false);
 
   return(
     <Fragment>
@@ -13,6 +15,7 @@ const RouterPage=()=>{
       <Routes>
         <Route path="/signin" element={<SignIn/>} />
         <Route path="/signup" element={<SignUp/>} />
+
       </Routes>
     </Fragment>
   )

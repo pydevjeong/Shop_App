@@ -20,19 +20,29 @@
   },
   "Gallery": [
     {
-      "title": "Project Title",
+      "title": "Kakao 지도",
       "largeImage": "img/portfolio/01-small.PNG",
       "smallImage": "img/portfolio/01-small.PNG"
     },
     {
-      "title": "Project Title",
+      "title": "CRUD 게시판",
       "largeImage": "img/portfolio/02-small.PNG",
       "smallImage": "img/portfolio/02-small.PNG"
     },
     {
-      "title": "Project Title",
+      "title": "장바구니 기능",
       "largeImage": "img/portfolio/03-small.PNG",
       "smallImage": "img/portfolio/03-small.PNG"
+    },
+    {
+      "title": "로그인 (백엔드 연동)",
+      "largeImage": "img/portfolio/login.png",
+      "smallImage": "img/portfolio/login.png"
+    },
+    {
+      "title": "회원가입 (백엔드 연동)",
+      "largeImage": "img/portfolio/register.png",
+      "smallImage": "img/portfolio/register.png"
     }
   ],
   "Services": [

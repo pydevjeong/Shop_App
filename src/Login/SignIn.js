@@ -53,6 +53,7 @@ export default function SignIn() {
       else{
         console.log("err");
       }
+    }
 
   const emailHandler=(e)=>{
     setEmailInfo(e.target.value)
@@ -134,4 +135,3 @@ export default function SignIn() {
     </ThemeProvider>
   );
 }
-}        
