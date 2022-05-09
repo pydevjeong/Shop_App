@@ -50,7 +50,22 @@ export default function SignIn() {
   }
   const handleSubmit = (event) => {
     event.preventDefault(); 
-    fecthUser();
+    fecthUser('',{
+      method:"GET",
+      body:JSON.stringify(),
+      headers:{
+        'Content-type':'application/json'
+      }
+    }).then((res)=>{
+      if(res.ok){
+        console.log(res)
+      }
+      else{
+        return res.json().then((data)=>{
+          throw new Error('Not uploaded!!!!!!!!!!!!!')
+        })
+      }
+    })
 
     // if ( === emailInfo && === passwordInfo){
     //   setCheckInfo(true)
