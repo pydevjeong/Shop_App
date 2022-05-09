@@ -40,7 +40,19 @@ export default function SignIn() {
       console.log(response.status);
       const data=await response.json()
       console.log(data);
-    }
+      const information=data.map((info,index)=>({
+        id:index+1,
+        email:info.email,
+        password:info.password
+      }))
+      console.log(information[0].email);
+      if (emailInfo===information[0].email && passwordInfo===information[0].password){
+        console.log("user정보 성공");
+        setCheckInfo(true)
+      }
+      else{
+        console.log("err");
+      }
 
   const emailHandler=(e)=>{
     setEmailInfo(e.target.value)
@@ -50,26 +62,7 @@ export default function SignIn() {
   }
   const handleSubmit = (event) => {
     event.preventDefault(); 
-    fecthUser('',{
-      method:"GET",
-      body:JSON.stringify(),
-      headers:{
-        'Content-type':'application/json'
-      }
-    }).then((res)=>{
-      if(res.ok){
-        console.log(res)
-      }
-      else{
-        return res.json().then((data)=>{
-          throw new Error('Not uploaded!!!!!!!!!!!!!')
-        })
-      }
-    })
-
-    // if ( === emailInfo && === passwordInfo){
-    //   setCheckInfo(true)
-    // }
+    fecthUser()
   };
 
   return (
@@ -141,3 +134,4 @@ export default function SignIn() {
     </ThemeProvider>
   );
 }
+}        
