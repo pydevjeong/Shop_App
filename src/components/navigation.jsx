@@ -68,6 +68,11 @@ export const Navigation = (props) => {
                 Contact
               </a>
             </li>
+            <li>
+              <a href='https://localhost:8080/board/list.do' className='page-scroll'>
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
       </div>
