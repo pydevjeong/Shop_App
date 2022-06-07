@@ -35,6 +35,21 @@
       "smallImage": "img/portfolio/03-small.PNG"
     },
     {
+      "title": "음성검색 기능",
+      "largeImage": "img/portfolio/voice.png",
+      "smallImage": "img/portfolio/voice.png"
+    },
+    {
+      "title": "날씨 기능",
+      "largeImage": "img/portfolio/weather.png",
+      "smallImage": "img/portfolio/weather.png"
+    },
+    {
+      "title": "댓글 기능",
+      "largeImage": "img/portfolio/comment.png",
+      "smallImage": "img/portfolio/comment.png"
+    },
+    {
       "title": "로그인 (백엔드 연동)",
       "largeImage": "img/portfolio/login.png",
       "smallImage": "img/portfolio/login.png"

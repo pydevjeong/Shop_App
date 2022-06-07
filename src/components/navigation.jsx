@@ -1,15 +1,7 @@
-import {Link, Route,Routes, useParams} from 'react-router-dom'
-
-
-
 
 export const Navigation = (props) => {
 
-  const params=useParams()
-  
-  const goLoginPage=()=>{
-    console.log('dqw');
-  }
+
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div className='container'>
@@ -70,7 +62,7 @@ export const Navigation = (props) => {
             </li>
             <li>
               <a href='https://localhost:8080/board/list.do' className='page-scroll'>
-                Contact
+                Board
               </a>
             </li>
           </ul>

@@ -10,9 +10,6 @@ import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
-import SignIn from "./Login/SignIn";
-import MainHeader from "./components/MainHeader";
 import RouterPage from "./Login/RouterPage";
 
 
@@ -28,7 +25,7 @@ const App = (props) => {
   }, []);
 
   const [isLogin,setIsLogin]=useState(true)
-  const [isValid,setIsValid]=useState(false)
+  
 
   if(props.showMainPage){
     setIsLogin(true)
